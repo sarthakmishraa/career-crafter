@@ -3,6 +3,13 @@
 Welcome to Career Crafter, a Python-powered app deployed on Streamlit, designed to streamline your job application process.
 The app is live [here](https://atsmatch.streamlit.app/)
 
+## Key Features
+
+- 📑ATS Resume Matcher
+- ❓Application Question Help
+- 📝Cover Letter Help
+- 💌Referral Message Help
+
 ## Short Description
 
 📑ATS Matcher -
@@ -19,17 +26,13 @@ Upload your resume text and the job description and the role you're applying for
 
 ## Snippets
 
-![Home](https://github.com/sarthakmishraa/ats-matcher/assets/56118819/a88a2166-82f0-45f0-9444-f2ecabb7d15f)
-![ATS Matcher](https://github.com/sarthakmishraa/ats-matcher/assets/56118819/dde3352a-5434-403c-b712-e5ab1db7bd2d)
-![ATS Matcher Results](https://github.com/sarthakmishraa/ats-matcher/assets/56118819/87c1b960-7d3d-4cd9-b0ff-c2642346b5d1)
-![About](https://github.com/sarthakmishraa/ats-matcher/assets/56118819/a5f6df9f-1111-47f2-bdc0-362378183698)
+![Home](https://github.com/sarthakmishraa/career-crafter/assets/56118819/df36a8a6-edfc-4f44-9b37-ea1492d9c121)
 
-## Key Features
+![ATS Matcher](https://github.com/sarthakmishraa/career-crafter/assets/56118819/7c6e205c-9e47-4e51-8231-28ad76de58d5)
 
-- 📑ATS Resume Matcher
-- ❓Application Question Help
-- 📝Cover Letter Help
-- 💌Referral Message Help
+![ATS Matcher Results](https://github.com/sarthakmishraa/career-crafter/assets/56118819/d6041b8a-78a1-4754-834b-624432cc4dd5)
+
+![About](https://github.com/sarthakmishraa/career-crafter/assets/56118819/430e2e1b-ead2-47b6-b521-1b1d3c6b1a74)
 
 ## Tech Used
 
