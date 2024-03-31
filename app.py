@@ -13,8 +13,8 @@ model = genai.GenerativeModel('gemini-pro')
 with st.sidebar:
     selected = option_menu(
         menu_title = "Main Menu",
-        options = ["About Sarthak", "ATS Resume Matcher", "Application Question Help", "Cover Letter Help", "Referral Message Help"],
-        icons = ["person-circle", "file-earmark-person", "question-circle", "file-earmark-text-fill", "chat-dots"],
+        options = ["About Sarthak", "ATS Resume Matcher", "Application Question Help", "Cover Letter Help", "Referral Message Help", "Interview Prep Assistant"],
+        icons = ["person-circle", "file-earmark-person", "question-circle", "file-earmark-text-fill", "chat-dots", "file-earmark-text-fill"],
         menu_icon = "cast"
     )
 
@@ -43,6 +43,11 @@ if selected == "About Sarthak":
 
     st.header("💌Referral Message Help")
     st.subheader("Land interviews with effective networking messages.")
+
+    st.divider()
+
+    st.header("🎙️Interview Prep Assistant")
+    st.subheader("Get tailored interview questions and suggested answers to ace your next interview with confidence.")
 
     st.divider()
 
@@ -185,6 +190,31 @@ if selected == "Referral Message Help":
     job description: {job_desc}
 
     I want the response in three paragraphs.
+    '''
+
+    if st.button(label="Go"):
+        result = model.generate_content(prompt)
+        st.write(result.text)
+    
+    st.divider()
+
+if selected == "Interview Prep Assistant":
+
+    st.title("Interview Prep Assistant using Gemini")
+
+    st.subheader("Enter your resume:")
+
+    resume = st.text_area(label=" ", value="", height=400, key=1)
+
+    st.subheader("Enter job description:")
+
+    job_desc = st.text_area(label=" ", value="", height=400, key=2)
+
+    prompt = f'''
+    Write 15 interview questions and their answers, my resume and job description given below.
+
+    resume: {resume}
+    job description: {job_desc}
     '''
 
     if st.button(label="Go"):
