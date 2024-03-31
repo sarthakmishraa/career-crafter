@@ -9,6 +9,7 @@ The app is live [here](https://atsmatch.streamlit.app/)
 - ❓Application Question Help
 - 📝Cover Letter Help
 - 💌Referral Message Help
+- 🎙️Interview Prep Assistant
 
 ## Short Description
 
@@ -23,6 +24,9 @@ Upload your resume text and the job description and our tool will write a cover 
 
 💌Referral Message Help -
 Upload your resume text and the job description and the role you're applying for then our tool will write a short referral message for you.
+
+🎙️Interview Prep Assistant -
+Prepare confidently for your next job interview by entering the job description and your resume. Our tool will generate common interview questions tailored to the job, along with suggested answers based on your resume and the job requirements. Practice your responses to key questions and feel more prepared on the big day.
 
 ## Snippets
 
@@ -44,7 +48,7 @@ Upload your resume text and the job description and the role you're applying for
 
 1. Clone the repository: `git clone https://github.com/sarthakmishraa/ats-matcher.git`
 2. Install the required dependencies: `pip install -r requirements.txt`
-3. Run the Streamlit app: `streamlit run app.py`
+3. Run the Streamlit app: `streamlit run app.py` or `python -m streamlit run app.py`
 4. Open your browser and navigate to `http://localhost:3000` to access the app.
 5. Upload your resume and the job description.
 6. View the analysis results and tailored profile summary.
