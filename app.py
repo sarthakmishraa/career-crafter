@@ -12,6 +12,17 @@ genai.configure(api_key=api)
 
 model = genai.GenerativeModel('gemini-pro')
 
+st.set_page_config(
+    page_title="Career Crafter by Sarthak Mishra",
+    initial_sidebar_state="auto",
+    page_icon="random",
+    menu_items={
+        'Get Help': 'https://www.linkedin.com/in/sarthakmishraa/',
+        'Report a bug': "http://sarthakmishra.lovestoblog.com/",
+        'About': "https://github.com/sarthakmishraa/career-crafter"
+    }
+)
+
 with st.sidebar:
     selected = option_menu(
         menu_title = "Main Menu",
@@ -100,8 +111,16 @@ if selected == "ATS Resume Matcher":
     '''
 
     if st.button(label="Go"):
-        result = model.generate_content(prompt)
-        st.write(result.text)
+        if resume=="" and job_desc=="":
+            st.error("Please enter the job description and your resume")
+        elif resume=="":
+            st.error("Please add your resume")
+        elif job_desc=="":
+            st.error("Please add the job description")
+        else:
+            with st.spinner("Wait for the app to generate the results..."):
+                result = model.generate_content(prompt)
+                st.write(result.text)
     
     st.divider()
     
@@ -136,8 +155,18 @@ if selected == "Application Question Help":
     '''
 
     if st.button(label="Go"):
-        result = model.generate_content(prompt)
-        st.write(result.text)
+        if resume=="" and job_desc=="" and app_ques=="":
+            st.error("Please enter the question, job description and your resume")
+        elif resume=="":
+            st.error("Please add your resume")
+        elif job_desc=="":
+            st.error("Please add the job description")
+        elif app_ques=="":
+            st.error("Please add the application question")
+        else:
+            with st.spinner("Wait for the app to generate the results..."):
+                result = model.generate_content(prompt)
+                st.write(result.text)
     
     st.divider()
 
@@ -163,8 +192,16 @@ if selected == "Cover Letter Help":
     '''
 
     if st.button(label="Go"):
-        result = model.generate_content(prompt)
-        st.write(result.text)
+        if resume=="" and job_desc=="":
+            st.error("Please enter the job description and your resume")
+        elif resume=="":
+            st.error("Please add your resume")
+        elif job_desc=="":
+            st.error("Please add the job description")
+        else:
+            with st.spinner("Wait for the app to generate the results..."):
+                result = model.generate_content(prompt)
+                st.write(result.text)
     
     st.divider()
 
@@ -195,8 +232,18 @@ if selected == "Referral Message Help":
     '''
 
     if st.button(label="Go"):
-        result = model.generate_content(prompt)
-        st.write(result.text)
+        if resume=="" and job_desc=="" and job_role=="":
+            st.error("Please enter the job description and your resume")
+        elif resume=="":
+            st.error("Please add your resume")
+        elif job_desc=="":
+            st.error("Please add the job description")
+        elif job_role=="":
+            st.error("Please add the job role")
+        else:
+            with st.spinner("Wait for the app to generate the results..."):
+                result = model.generate_content(prompt)
+                st.write(result.text)
     
     st.divider()
 
@@ -220,7 +267,15 @@ if selected == "Interview Prep Assistant":
     '''
 
     if st.button(label="Go"):
-        result = model.generate_content(prompt)
-        st.write(result.text)
+        if resume=="" and job_desc=="":
+            st.error("Please enter the job description and your resume")
+        elif resume=="":
+            st.error("Please add your resume")
+        elif job_desc=="":
+            st.error("Please add the job description")
+        else:
+            with st.spinner("Wait for the app to generate the results..."):
+                result = model.generate_content(prompt)
+                st.write(result.text)
     
     st.divider()
