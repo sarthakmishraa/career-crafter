@@ -35,6 +35,8 @@ if selected == "About Sarthak":
 
     st.title("Career Crafter")
 
+    st.markdown("Trusted by 200+ users.")
+
     st.header("Discover four essential sections designed to supercharge your job application process:")
 
     st.divider()
